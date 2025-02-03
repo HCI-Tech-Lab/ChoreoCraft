@@ -145,12 +145,12 @@ body {
 /* Teaser Section */
 .teaser-image {
   display: block;
-  margin: 0 auto 20px auto; /* 이미지 아래 여백 추가 */
+  margin: 0 auto 20px auto; 
   width: 100%;
-  max-width: 1000px; /* 최대 크기 */
-  height: auto; /* 비율 유지 */
+  max-width: 1000px; 
+  height: auto; 
   border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .teaser .title.is-4 {
@@ -185,3 +185,61 @@ body {
   max-width: 100% !important;
 }
 
+.publication-title {
+  display: inline-block;
+  font-weight: bold; 
+}
+
+
+.title-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dancing-emoji-man {
+  position: absolute;
+  top: 50%;
+  left: 97%;
+  transform: translate(0, -50%) rotate(0deg);
+  opacity: 0;
+  font-size: 4rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dancing-emoji-woman {
+  position: absolute;
+  top: 50%;
+  left: -6%;
+  transform: translate(0, -50%) rotate(0deg);
+  opacity: 0;
+  font-size: 4rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.title-container:hover .dancing-emoji-man {
+  opacity: 1;
+  animation: tiltEmoji 1.7s infinite;
+}
+
+.title-container:hover .dancing-emoji-woman {
+  opacity: 1;
+  animation: tiltEmoji 1.7s infinite;
+}
+
+@keyframes tiltEmoji {
+  0% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(0, -50%) rotate(20deg);
+  }
+  50% {
+    transform: translate(0, -50%) rotate(-20deg);
+  }
+  75% {
+    transform: translate(0, -50%) rotate(20deg);
+  }
+  100% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+}
