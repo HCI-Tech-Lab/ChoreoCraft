@@ -13,7 +13,7 @@ If you find ChoreoCraft useful for your work please cite:
   location = {Yokohama, Japan},
   publisher = {ACM},
   address = {New York, NY, USA},
-  pages = {22},
+  pages = {21},
   doi = {10.1145/3706598.3714220}
 }
 ```
